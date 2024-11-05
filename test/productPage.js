@@ -4,7 +4,7 @@ class ProductPage {
     }
 
     addToCart() {
-        cy.get('#tbodyid > div:nth-child(2) > div > a').click();
+        cy.get('[onclick="addToCart(1)"]').click();
     }
 
     confirmProductAddedAlert() {

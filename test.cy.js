@@ -3,8 +3,8 @@ import ProductPage from './test/productPage';
 
 
 describe('Demoblaze Website Tests', () => {
-    const username = 'testuser'; // Ensure this is the correct username
-    const password = 'password123'; // Ensure this is the correct password
+    const username = 'tesTuser123'; // Ensure this is the correct username
+    const password = '123456'; // Ensure this is the correct password
 
     beforeEach(() => {
         LoginPage.visit();
@@ -13,6 +13,7 @@ describe('Demoblaze Website Tests', () => {
     it('Test Successful Login', () => {
         LoginPage.clickLogin();
         LoginPage.enterUsername(username);
+        cy.wait(2000)
         LoginPage.enterPassword(password);
         LoginPage.submitLogin();
 
@@ -27,4 +28,5 @@ describe('Demoblaze Website Tests', () => {
         ProductPage.addToCart();
         ProductPage.confirmProductAddedAlert();
     });
+
 });
